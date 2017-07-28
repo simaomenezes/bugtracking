@@ -1,3 +1,5 @@
+import 'materialize-css';
+import { MaterializeModule } from 'angular2-materialize';
 import { routing } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,11 +18,12 @@ import { LoginComponent } from './componentes/login/login.component';
     UsersComponent,
     ProductsComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
