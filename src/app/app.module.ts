@@ -1,3 +1,6 @@
+import { UsersService } from './services/users.service';
+import { ProductsService } from './services/products.service';
+import { BugsService } from './services/bugs.service';
 import 'materialize-css';
 import { MaterializeModule } from 'angular2-materialize';
 import { routing } from './app.routing';
@@ -25,7 +28,7 @@ import { LoginComponent } from './componentes/login/login.component';
     routing,
     MaterializeModule
   ],
-  providers: [],
+  providers: [BugsService, ProductsService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
