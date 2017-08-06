@@ -1,3 +1,4 @@
+import { ProductsComponent } from './componentes/products/products.component';
 import { ModuleWithProviders } from '@angular/core';
 import { UsersComponent } from './componentes/users/users.component';
 import { LoginComponent } from './componentes/login/login.component';
@@ -8,6 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
 const APP_ROUTES: Routes = [
     { path: 'users', component: UsersComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'products', component: ProductsComponent},
     { path: '', component: HomeComponent }
 ];
 

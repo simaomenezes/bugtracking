@@ -1,3 +1,21 @@
+<h2>Product</h2>
+<div>
+  <label>Name Product</label>
+  <input type="text" [(ngModel)]="product.name" name="name" placeholder="name do product">
+</div>
+<div>
+  <button (click)="createProduct(product)">Create Product</button>
+  
+</div>
+
+
+
 <p>
   products works!
 </p>
+<ul>
+  <li *ngFor="let item of products">
+    {{ item.productId }}
+    {{ item.name }}
+  </li>
+</ul>

@@ -6,6 +6,8 @@ import { MaterializeModule } from 'angular2-materialize';
 import { routing } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BugsComponent } from './componentes/bugs/bugs.component';
@@ -26,7 +28,9 @@ import { LoginComponent } from './componentes/login/login.component';
   imports: [
     BrowserModule,
     routing,
-    MaterializeModule
+    MaterializeModule,
+    HttpModule,
+    FormsModule
   ],
   providers: [BugsService, ProductsService, UsersService],
   bootstrap: [AppComponent]
