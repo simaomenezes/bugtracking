@@ -1,3 +1,4 @@
+import { ProductdetalheComponent } from './componentes/products/productdetalhe/productdetalhe.component';
 import { ProductsComponent } from './componentes/products/products.component';
 import { ModuleWithProviders } from '@angular/core';
 import { UsersComponent } from './componentes/users/users.component';
@@ -10,6 +11,8 @@ const APP_ROUTES: Routes = [
     { path: 'users', component: UsersComponent },
     { path: 'login', component: LoginComponent },
     { path: 'products', component: ProductsComponent},
+    { path: 'product/:id/:nome/:teste', component: ProductsComponent},
+    { path: 'products/:id/:cdProduct/:nmProduct', component: ProductdetalheComponent},
     { path: '', component: HomeComponent }
 ];
 
