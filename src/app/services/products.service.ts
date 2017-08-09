@@ -1,3 +1,4 @@
+import { Tproform } from './../model/tproform';
 import { Products } from './../model/products';
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
@@ -24,10 +25,23 @@ export class ProductsService {
     }).toPromise().then(res => res.json() as Products).catch(this.handleError);
   }
 
-  getProductById(id: number, cdProdutc: number, nmProduct:string): Promise<Products> {
-    const url = `${this.productsUrl}/${id}/${cdProdutc}/${nmProduct}`;
+  getProductByIdTest(id: number): Promise<Products> {
+    const url = `${this.productsUrl}/${id}`;
     return this.http.get(url).toPromise().then(resp => resp.json() as Products).catch(this.handleError);
   }
+
+  findByCdFormCdUsuarioNuAtendimento(cdFormulario: string, cdUsuario: string, nuAtendimento: number): Promise<Tproform> {
+    const url = `${this.productsUrl}/${cdFormulario}/${cdUsuario}/${nuAtendimento}`;
+    return this.http.get(url).toPromise().then(resp => resp.json() as Tproform).catch(this.handleError);
+  }
+
+  private Data(res: Response) {
+    return res.json();
+  }
+  private extractData(res: Response) {
+    let body = res.json();
+        return body;
+    }
 
   private handleError(error: any): Promise<any> {
     console.log("An error occurred: " + error);
