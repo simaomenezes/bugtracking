@@ -23,18 +23,24 @@ export class UsersComponent implements OnInit {
   save(user: Users): void {
     this.service.save(user).then(user => this.users.push(user));
   }
-  
+
   selected(value){
     switch (value.currentTarget.id) {
 
-      case 'roleConfirm':
+      case 'test1':
         this.user.roleConfirm = true;
+        this.user.roleCreate = false;
+        this.user.roleResolve = false;
         break;
-      case 'roleResolve':
+      case 'test2':
       this.user.roleResolve = true;
+      this.user.roleCreate = false;
+      this.user.roleConfirm = false;
         break;
-      case 'roleCreate':
+      case 'test3':
       this.user.roleCreate = true;
+      this.user.roleConfirm = false;
+      this.user.roleResolve = false;
         break;
 
       default:
