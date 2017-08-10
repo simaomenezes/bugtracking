@@ -11,7 +11,7 @@ const APP_ROUTES: Routes = [
     { path: 'users', component: UsersComponent },
     { path: 'login', component: LoginComponent },
     { path: 'products', component: ProductsComponent},
-    { path: 'product/:id/:nome/:teste', component: ProductsComponent},
+    { path: 'product/:id/', component: ProductsComponent},
     { path: 'products/:id', component: ProductdetalheComponent},
     { path: '', component: HomeComponent }
 ];

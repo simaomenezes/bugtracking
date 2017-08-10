@@ -1,11 +1,11 @@
 export class Users {
-    private userId: number;
-    private name: string;
-    private email:string;
-    private pass: string;
-    private roleConfirm: boolean;
-    private roleResolve: boolean;
-    private roleCreate: boolean;
+    public userId: number;
+    public name: string;
+    public email:string;
+    public pass: string;
+    public roleConfirm: boolean;
+    public roleResolve: boolean;
+    public roleCreate: boolean;
 
     constructor(){}
 }

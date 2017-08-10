@@ -1,3 +1,49 @@
-<p>
-  users works!
-</p>
+<!-- private userId: number;
+private name: string;
+private email:string;
+private pass: string;
+private roleConfirm: boolean;
+private roleResolve: boolean;
+private roleCreate: boolean; -->
+
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="Placeholder" id="nome" type="text" name="nome" [(ngModel)]="user.nome" class="validate">
+        <label for="first_name">Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="pass" name="pass" type="password" [(ngModel)]="user.pass" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" name="email" [(ngModel)]="user.email" class="validate">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <input name="group1" type="radio" (change)="selected($event)" id="roleConfirm" />
+      <label for="test1">Role Confirm</label>
+      <input name="group1" type="radio"  id="roleResolve" (change)="selected($event)"/>
+      <label for="test2">Role Resolve</label>
+      <input name="group1" type="radio"  id="roleCreate" (change)="selected($event)"/>
+      <label for="test3">Role Create</label>
+    </div>
+
+
+
+    <a class="waves-effect waves-light btn" (click)="save(user)">Save</a>
+  </form>
+
+
+
+
+<div class="collection">
+  <a href="#!" class="collection-item" *ngFor="let item of users">{{item.name}}</a>
+</div>
+</div>
