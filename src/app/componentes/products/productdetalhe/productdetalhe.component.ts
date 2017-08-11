@@ -32,7 +32,7 @@ export class ProductdetalheComponent implements OnInit, AfterViewInit{
 
   incricao: Subscription;
 
-  html: any;
+  html: string = 'alert("Esse assim da certo");';
 
 
 
@@ -57,19 +57,12 @@ export class ProductdetalheComponent implements OnInit, AfterViewInit{
 
     
     this.route.params.switchMap((params: Params) => this.service.getProductByIdTest(+params['id'])).subscribe(product => this.product = product); 
-
-    this.html = "simao";
-
-
-
     var  str_Elemenr = `
-
-    $('#launch').on("click", function() {
-      ${this.product.campoScript}
-    });
+      ${ this.html }
 
 
 
+      alert("HAHAH JJJJJ ASASAS")
     `;
     var nodeElement =   this.createTagScript("script",str_Elemenr);
     document.body.appendChild(nodeElement);
