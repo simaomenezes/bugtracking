@@ -4,18 +4,28 @@
   <input type="text" [(ngModel)]="product.name" name="name" placeholder="name do product">
 </div>
 <div>
+  <label>Codigo HTML</label>
+  <input type="text" [(ngModel)]="product.campoHtml" name="campoHtml" placeholder="campoHtml">
+</div>
+<div>
+  <label>Codigo JS Script</label>
+  <input type="text" [(ngModel)]="product.campoScript" name="campoScript" placeholder="campoScript">
+</div>
+<div>
   <button (click)="createProduct(product)">Create Product</button>
   
 </div>
 
 
-
-<p>
-  products works!
-</p>
-<ul>
-  <li *ngFor="let item of products">
-    {{ item.productId }}
-    {{ item.name }}
-  </li>
-</ul>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Campo HTML</th>
+    <th>Campo Script</th>
+  </tr>
+  <tr *ngFor="let item of products">
+    <td>{{ item.productId }}  |   {{ item.name }}</td>
+    <td [innerHTML]="item.campoHtml"></td>
+    <td>{{ item.campoScript }}</td>
+  </tr>
+</table>

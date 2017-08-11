@@ -1,4 +1,9 @@
 export class Products {
-    private productId: number;
-    private name:string;
+    public  productId: number;
+    public  name:string;
+	public campoHtml: string;
+    public campoScript: string;
+    
+
+    constructor(){}
 }

@@ -16,6 +16,7 @@ import { ProductsComponent } from './componentes/products/products.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ProductdetalheComponent } from './componentes/products/productdetalhe/productdetalhe.component';
+import { ScriptComponentComponent } from './componentes/script-component/script-component.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProductdetalheComponent } from './componentes/products/productdetalhe/p
     HomeComponent,
     LoginComponent,
     ProductdetalheComponent,
+    ScriptComponentComponent,
   ],
   imports: [
     BrowserModule,

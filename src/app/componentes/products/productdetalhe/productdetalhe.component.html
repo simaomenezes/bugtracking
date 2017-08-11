@@ -2,23 +2,20 @@
   productdetalhe works!
 </p>
 
-<p>
-  cdFormulario: {{ cdFormulario }}
-</p>
-<p>
- cd usuario: {{cdUsuario}}
-</p>
-<p>
-numero atendimento: {{nuAtendimento}}
-</p>
- 
+
+{{ product.campoScript }}
+
+<a href="#" id="dreport">ok</a>
+
+<button type="button" (click)="createTagScriptSImao(product.campoScript)">rapaz sera </button>
 
 
-<label for="">aasaas</label>
+<a id="launch" data-role="button">Launch</a>
 
 
-{{tproform.idForm}}
-{{tproform.cdForm}}
-{{tproform.cdUsuario}}
-{{tproform.nuAtendimento}}
 
+
+<app-script-component>
+  alert('hoi');
+  
+</app-script-component>
