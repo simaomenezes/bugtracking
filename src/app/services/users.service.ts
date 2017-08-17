@@ -1,6 +1,6 @@
 import { Users } from './../model/users';
 import { Headers, Http } from '@angular/http';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -9,6 +9,10 @@ export class UsersService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
   private baseUrl = 'http://localhost:8080/prototipows/rest/users';
+
+
+  // 
+  mudaValorEmmit = new EventEmitter<String>();
 
   constructor(private http: Http) {}
 
@@ -25,6 +29,11 @@ export class UsersService {
 
   private handlerError(error: any){
     return Promise.reject(error.message || error);
+  }
+
+  mudaTextoMenu(valor: string){
+    console.log(valor);
+    this.mudaValorEmmit.emit(valor);
   }
 
 }
