@@ -1,8 +1,7 @@
 import { UsersService } from './services/users.service';
 import { ProductsService } from './services/products.service';
 import { BugsService } from './services/bugs.service';
-import 'materialize-css';
-import { MaterializeModule } from 'angular2-materialize';
+
 import { routing } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,6 +17,17 @@ import { LoginComponent } from './componentes/login/login.component';
 import { ProductdetalheComponent } from './componentes/products/productdetalhe/productdetalhe.component';
 import { ScriptComponentComponent } from './componentes/script-component/script-component.component';
 
+
+
+import { CommonModule } from "@angular/common";
+
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { AlertComponent } from './componentes/alert/alert.component';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +38,17 @@ import { ScriptComponentComponent } from './componentes/script-component/script-
     LoginComponent,
     ProductdetalheComponent,
     ScriptComponentComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
     routing,
-    MaterializeModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+
+    CommonModule,
+    // BootstrapModalModule
+    BootstrapModalModule.forRoot({container:document.body})
   ],
   providers: [BugsService, ProductsService, UsersService],
   bootstrap: [AppComponent]
