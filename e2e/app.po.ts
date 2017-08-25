@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class BugtringPage {
+export class BugPage {
   navigateTo() {
     return browser.get('/');
   }

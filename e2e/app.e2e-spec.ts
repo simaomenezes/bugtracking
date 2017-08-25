@@ -1,10 +1,10 @@
-import { BugtringPage } from './app.po';
+import { BugPage } from './app.po';
 
-describe('bugtring App', () => {
-  let page: BugtringPage;
+describe('bug App', () => {
+  let page: BugPage;
 
   beforeEach(() => {
-    page = new BugtringPage();
+    page = new BugPage();
   });
 
   it('should display welcome message', () => {
